@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'maven'
-    id 'jacoco'
 }
 
 group 'be.bendem'
@@ -28,7 +27,6 @@ install {
 }
 
 javadoc {
-    exclude '**/impl/*.java'
     options.encoding = 'UTF-8'
     options.links 'https://docs.oracle.com/javase/8/docs/api/'
 }
@@ -53,10 +51,4 @@ test {
     useJUnit()
 
     testLogging.exceptionFormat = 'full'
-}
-
-jacocoTestReport {
-    reports {
-        xml.enabled true
-    }
 }
